@@ -1,0 +1,424 @@
+/*
+File Name: styles.css
+Date: 02/10/2021
+Programmer: Jonathan Landero Arrezola
+*/
+@import 'palette.less';
+@import 'mixins.less';
+
+/* MOBILE STYLESHEET */
+
+h1 {
+	.headingStyle(@color2; 1.5em);
+	text-align: center;
+	margin-top: 0em;
+	background-image: url("../images/ace18.jpg");
+	margin-bottom: 0em;
+	width: 100%;
+	height: 150px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+label {
+	display: block;
+}
+h3 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+p {
+	font-family: courier new, Manco, monospace;
+}
+
+.whole {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+body {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: @color2;
+	margin: 0;
+	width: 100%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+
+ .topnav.responsive {
+	 position: relative;
+}
+
+
+  .topnav.responsive a .icon {
+	  text-align: right;
+	  display: inline-block;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+	  text-align: center;
+	  text-decoration: none;
+	  color: white;
+	  margin: 10px;
+
+	 
+  }
+
+.topnav a {
+	display: none;
+}
+
+.topnav a:hover {
+  color: white;
+}
+
+
+.topnav .active {
+  background-color: @color1;
+  color: white;
+	display: none;
+}
+
+.topnav .icon {
+  display: block;
+	text-align: center;
+	color: white;
+}
+
+
+.resize {
+	width: 70%;
+	margin-top: 30px;
+	
+
+}
+
+
+
+.row {
+	margin: 20px;
+	width: auto;
+	font-family: courier new, Manco, monospace;
+}
+
+
+.row h2 {
+	text-align: left;
+	font-weight: bold;
+	font-size: 30px;
+	
+}
+
+
+
+.row p {
+	text-align: left;
+	font-size: 20px;
+	font-family: courier new, Manco, monospace;
+	padding: 8px;
+}
+
+
+.right h3 {
+	margin-left: 0px;
+}
+
+.row .right {
+	display: none;
+}
+
+iframe {
+	margin-right: 0px;
+	width: 100%;
+}
+
+
+
+/* Clear floats after the columns */
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+footer {
+	background-color: #333;
+}
+
+footer li {
+	list-style: none;
+	text-align: center;
+	color: white;
+	padding: 10px;
+	
+
+	
+}
+
+footer li a {
+	color: @color1;
+	text-decoration: none;
+	background-color: white;
+	border-radius: 10%;
+	padding: 5px;
+	
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	padding-bottom: 10px;
+	
+}
+
+.list {
+	text-align: left;
+}
+
+
+/*
+TABLET STYLESHEET
+The following CSS affects all screen sizes larger than 480 pixels wide.
+*/
+
+
+@media screen and (min-width: 481px) {
+	.topnav {
+		overflow: hidden;
+		background-color: #333;
+	}
+	
+	.topnav .active{
+		display: inline-block;
+		background-color: @color1;
+	}
+	.topnav a {
+		display: inline-block;
+		
+	}
+	.topnav .icon {
+  display: none;
+}
+	.topnav a {
+		margin: 20px;
+		text-decoration: none;
+		font-size: 25px;
+		color: white;
+		flex-wrap: nowrap;
+	}
+	
+	.resize {
+	width: 30%;
+		margin-top: 30px;
+}
+	
+	.row p {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+
+
+/*
+DESKTOP STYLESHEET
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+*/
+
+@media screen and (min-width: 1025px) {
+	
+	h2 {
+		margin-left: 10px;;
+		text-align: center;
+	}
+	
+	.row .left  h3 {
+		margin-left: 10px;
+		text-align: left;
+	}
+	
+	.row .right {
+	display: block;
+}
+	
+	* {
+	box-sizing: border-box
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+    right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+	input {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+	
+	.row:after {
+  content: "";
+  display: table;
+  clear: both;
+	width: 20px;
+}
+
+
+	.right {
+  width: 25%;
+  float: right;
+	margin: auto;overflow: auto;
+}
+	
+	p{
+		letter-spacing: 1px;
+		font-family: courier new, Manco, monospace;
+}
+	
+	.slideshow-container {
+		max-width: 1000px;
+  		position: relative;
+  		margin: auto;
+	}
+	
+	.dot {
+		cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+	transition: background-color 0.6s ease;
+		display: inline-block;
+	
+	}
+	
+	.column {
+  float: left;
+  padding: 10px;
+  height: auto; 
+  margin: auto;
+  text-align: center;
+}
+	
+	.left {
+  width: 75%;
+  float: left;
+	margin: auto;
+		overflow: auto;
+}
+
+	.whole {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+	
+		.resize {
+	width: 25%;
+	padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 10px;
+}
+	.fa {
+ display: none;
+}
+
+
+}
